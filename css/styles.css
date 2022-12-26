@@ -179,7 +179,6 @@ footer img {
 .stat-cards {
   flex-wrap: wrap;
   flex-direction: column;
-
   width: 90%;
   margin: 3rem 0;
 }
@@ -198,6 +197,17 @@ footer img {
   position: relative;
   height: 250px;
 }
+
+/* .detailed::before {
+  content: "";
+  top: 0%;
+  left: 100%;
+  position: absolute;
+  border: 7px solid var(--Cyan);
+  transform: rotate(90deg);
+  width: 20%;
+} */
+
 .stat-img {
   border: 1px solid teal;
   display: inline;
@@ -393,10 +403,29 @@ footer {
   }
   .brand {
     align-self: flex-start;
+    z-index: 2;
   }
   .detailed {
     align-self: center;
   }
+  .detailed::before {
+    content: "";
+    top: 50%;
+    left: 100%;
+    position: absolute;
+    border: 7px solid var(--Cyan);
+    width: 20%;
+    /* transform: translate(-50%, -50%); */
+  }
+  .detailed::after {
+    content: "";
+    top: 50%;
+    right: 100%;
+    position: absolute;
+    border: 7px solid var(--Cyan);
+    width: 50%;
+  }
+
   .fully {
     align-self: flex-end;
   }
